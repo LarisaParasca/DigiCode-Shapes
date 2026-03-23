@@ -10,7 +10,7 @@ export class GraphicsPool {
     ShapeFactory.drawInto(g, model.type, model.size, model.color, model.vertices);
     g.x = model.x;
     g.y = model.y;
-    g.visible = true;
+    g.visible = true; 
     return g;
   }
 

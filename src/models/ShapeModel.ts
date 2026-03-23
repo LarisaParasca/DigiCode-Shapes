@@ -9,8 +9,8 @@ function shoelaceArea(pts: ReadonlyArray<number>): number {
     const j = (i + 1) % n;
     area += pts[i * 2] * pts[j * 2 + 1];
     area -= pts[j * 2] * pts[i * 2 + 1];
-  }
-  return Math.abs(area) / 2;
+  } 
+  return Math.abs(area) / 2; 
 }
 
 export class ShapeModel {

@@ -9,7 +9,7 @@ const SPAWN_RATE_MIN  = 1;
 const SPAWN_RATE_MAX  = 20;
 const SPAWN_RATE_STEP = 1;
 const GRAVITY_MIN     = 0;
-const GRAVITY_MAX     = 2000;
+const GRAVITY_MAX     = 2000; 
 const GRAVITY_STEP    = 50;
 
 export class GameController {

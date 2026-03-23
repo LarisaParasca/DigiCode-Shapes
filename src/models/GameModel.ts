@@ -11,7 +11,7 @@ export class GameModel {
   get running(): boolean { return this._running; }
 
   start(): void { this._running = true; }
-  stop(): void  { this._running = false; }
+  stop(): void  { this._running = false; } 
 
   get totalArea(): number {
     return this._shapes.reduce((sum, s) => sum + s.area, 0);

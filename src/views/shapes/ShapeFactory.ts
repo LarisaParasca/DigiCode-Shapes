@@ -7,7 +7,7 @@ function drawRegularPolygon(g: Graphics, sides: number, radius: number): Graphic
     const angle = (i / sides) * Math.PI * 2 - Math.PI / 2;
     points.push(Math.cos(angle) * radius, Math.sin(angle) * radius);
   }
-  return g.poly(points);
+  return g.poly(points); 
 }
 
 export class ShapeFactory {

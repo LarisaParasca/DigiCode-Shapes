@@ -8,7 +8,7 @@ const PADDING = 120;
 export class GameView {
   private readonly app: Application;
   private readonly stage: Container;
-  private readonly _gameArea: Graphics;
+  private readonly _gameArea: Graphics; 
 
   onShapeClick:   ((model: ShapeModel) => void) | null = null;
   onAreaClick:    ((x: number, y: number) => void) | null = null;
