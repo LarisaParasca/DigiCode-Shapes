@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DigiCode — Pixi Shapes</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { overflow: hidden; }
+
+      #stats {
+        position: absolute;
+        left: 120px;
+        top: 60px;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      #stat-area-row {
+        position: absolute;
+        left: 50vw;
+        top: 60px;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      .stat-row {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-family: monospace;
+        font-size: 11px;
+        color: #aaaacc;
+      }
+
+      .stat-row input {
+        width: 140px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(102, 102, 204, 0.4);
+        border-radius: 4px;
+        color: #ffffff;
+        font-family: monospace;
+        font-size: 13px;
+        padding: 2px 8px;
+        pointer-events: none;
+      }
+
+      #ctrl-spawn-group,
+      #ctrl-gravity-group {
+        position: absolute;
+        bottom: 20px;
+        z-index: 10;
+      }
+
+      #ctrl-spawn-group   { left: 120px; }
+      #ctrl-gravity-group { left: 50vw;  }
+
+      .ctrl-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-family: monospace;
+        font-size: 11px;
+        color: #aaaacc;
+      }
+
+      .ctrl-group .ctrl-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .ctrl-group input {
+        width: 110px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(102, 102, 204, 0.4);
+        border-radius: 4px;
+        color: #ffffff;
+        font-family: monospace;
+        font-size: 13px;
+        padding: 2px 8px;
+        pointer-events: none;
+      }
+
+      .ctrl-btn {
+        width: 28px;
+        height: 28px;
+        background: rgba(102, 102, 204, 0.2);
+        border: 1px solid rgba(102, 102, 204, 0.5);
+        border-radius: 4px;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+        line-height: 1;
+      }
+
+      .ctrl-btn:hover {
+        background: rgba(102, 102, 204, 0.4);
+      }
+    </style>
+    <script type="module" crossorigin src="/DigiCode/assets/index-B9JmQCjb.js"></script>
+  </head>
+  <body>
+    <div id="stats">
+      <div class="stat-row">
+        <label>Number of current shapes</label>
+        <input id="stat-shapes" type="text" readonly value="0" />
+      </div>
+    </div>
+
+    <div id="stat-area-row" class="stat-row">
+      <label>Surface area occupied by shapes</label>
+      <input id="stat-area" type="text" readonly value="0 px²" />
+    </div>
+
+    <div id="ctrl-spawn-group" class="ctrl-group">
+      <label>Number of shapes per sec</label>
+      <div class="ctrl-row">
+        <button class="ctrl-btn" id="spawn-dec">−</button>
+        <input id="ctrl-spawn" type="text" readonly value="1" />
+        <button class="ctrl-btn" id="spawn-inc">+</button>
+      </div>
+    </div>
+
+    <div id="ctrl-gravity-group" class="ctrl-group">
+      <label>Gravity value</label>
+      <div class="ctrl-row">
+        <button class="ctrl-btn" id="gravity-dec">−</button>
+        <input id="ctrl-gravity" type="text" readonly value="600 px/s²" />
+        <button class="ctrl-btn" id="gravity-inc">+</button>
+      </div>
+    </div>
+
+  </body>
+</html>
